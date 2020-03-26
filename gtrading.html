@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Article">
+<head>
+
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>环球控股 - 实时汇率</title>
+<link rel="icon" type="image/png" href="/sites/www.gtrading.com.au/css/images/favicon.ico" />
+<link rel="alternate" href="http://en.gtrading.com.au/" hreflang="en" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" media="(device-height: 568px)" />
+
+    <link rel="canonical" href="http://www.gtrading.com.au/live-rate" />
+
+
+<script type="text/javascript">
+        var script_url = '/';
+        var images_prefix = '/css/images/';
+        var ajax_prefix = '/';
+        var common_prefix = '';
+        var system_moment_format_date = 'L2';
+        var system_moment_format_time = 'LH';
+        var system_moment_format_datetime = 'L2 LH';
+</script>
+<script type="text/javascript" src="/js/yui/yahoo-dom-event/yahoo-dom-event.js" ></script>
+<script type="text/javascript" src="/js/yui/container/container-min.js" ></script>
+<script type="text/javascript" src="/js/yui/event/event-min.js" ></script>
+<script type="text/javascript" src="/js/yui/element/element-min.js" ></script>
+<script type="text/javascript" src="/js/yui/yuiloader/yuiloader-min.js" ></script>
+<script type="text/javascript" src="/js/yui/dom/dom-min.js" ></script>
+<script type="text/javascript" src="/js/yui/animation/animation-min.js" ></script>
+<script type="text/javascript" src="/js/yui/dragdrop/dragdrop-min.js" ></script>
+<script type="text/javascript" src="/js/yui/button/button-min.js" ></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/yh_tooltip.js" ></script>
+<script type="text/javascript" src="/js/validator_o.js" ></script>
+<script type="text/javascript" src="/js/AJAX.js" ></script>
+<script type="text/javascript" src="/js/slimbox_module.js" ></script>
+<script type="text/javascript" src="/js/body_blocker.js" ></script>
+<script type="text/javascript" src="/components/sidebox/js/sidebox_drop.js" ></script>
+<script type="text/javascript" src="/components/sidebox/js/sidebox.js" ></script>
+<script type="text/javascript" src="/js/helper.js"></script>
+<script src="/js/sweetAlert/sweetalert.min.js"></script>
+<script type="text/javascript">
+
+    function confirm_callback(options, callback, refuse_callback){
+        if(!(options instanceof Object)){
+            options = {};
+        }
+        var default_options = {
+            title: 'Are you sure?',
+            text: '',
+            type: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            closeOnConfirm: true,
+            closeOnCancel: true,
+        };
+        for(opt in default_options)
+            if(!(opt in options)){
+                options[opt] = default_options[opt];
+            }
+        setTimeout(function () {
+            swal(
+                    options,
+                    function (isConfirm) {
+                        if (isConfirm) {
+                            if (callback)
+                                callback();
+                        }
+                        else if (refuse_callback){
+                            refuse_callback();
+                        }
+                    }
+            );
+        }, 1);
+    }
+    function confirm_click(confirm_cancel_callback, options_or_title) {
+        window.event.preventDefault();
+        var swal_options = {
+            title : 'Are you sure?',
+            type: 'warning'
+        }
+        if(typeof options_or_title == 'string'){
+            swal_options['title'] = options_or_title;
+        }
+        else{
+            for(key in options_or_title){
+                swal_options[key] = options_or_title[key];
+            }
+        }
+        if (confirm_cancel_callback){
+            confirm_callback(
+                    swal_options,
+                    confirm_cancel_callback
+            );
+        }
+        else{   // allow default behavior
+            current_target = window.event.currentTarget;
+            confirm_callback(
+                    swal_options,
+                    function(){
+                        if(current_target.href)
+                            window.location = current_target.href;
+                        else if(current_target.tagName == 'INPUT'){
+                            if(current_target.type == "checkbox"){
+                                if(current_target.checked == false)
+                                    current_target.checked = true;
+                                else
+                                    current_target.checked = false;
+                            }
+                            else{
+                                $(current_target).closest('form').submit();
+                            }
+                            // NOTICE! submit form not tested
+                        }
+                    }
+            );
+        }
+    }
+
+</script>

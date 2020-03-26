@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="120" http-equiv="refresh"/>
+    <title>SUPAY</title>
+    <link href="/website/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/website/resources/css/style.css" rel="stylesheet"/>
+    <link href="/website/resources/css/ExchangeRateTable.css" rel="stylesheet"/>
+    <script src="/website/resources/jquery/jquery-2.2.1.min.js"></script>
+    <script src="/website/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function showPopUp(type, id) {
+            if ("news" == type) {
+                var titleElmtStr = "news_title_" + id;
+                var contentElmtStr = "news_content_" + id;
+            } else {
+                var titleElmtStr = "bulletin_title_" + id;
+                var contentElmtStr = "bulletin_content_" + id;
+            }
+            $("#popupModalTitle").text(document.getElementById(titleElmtStr).value);
+            $("#popupModalContent").text(document.getElementById(contentElmtStr).value);
+            $("#popupModal").modal();
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <!--<div class="container-fluid">  -->
+    <div class="row" style="background-color:#E90017">
+        <!-- <div class="row" style="background-color:#E90017;margin-left: 0px;margin-right: 0px;"> -->
+        <div class="col-sm-12 col-md-4 text-center logoBG" style="padding-top:10px; z-index:1">
+            <img src="/website/resources/images/supay_logo_no_bg.png"/>
+            <div class="d-none d-block d-sm-block d-md-none align-text-bottom">
+                <a class="lang_link" href="/website/?language=cn">中文版</a><span class="lang_link">  /  </span><a
+                    class="lang_link" href="/website/?language=en">English</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 d-none d-md-block"><img src="/website/resources/images/Index_01-r.gif"/></div>
+        <div class="col-sm-12 col-md-3 d-none d-md-block text-center">
+<span class="align-bottom">
+<a class="lang_link" href="/website/?language=cn">中文版</a><span class="lang_link">  /  </span><a class="lang_link"
+                                                                                                href="/website/?language=en">English</a>
+</span>
+        </div>
+    </div>
+    <div class="topnav" id="myTopnav" style="margin-left: -15px;margin-right: -15px;">
+        <!-- <div class="topnav" id="myTopnav">-->
+        <a class="active" href="/website/?language=en">Home</a>
+        <a href="/website/aboutUs?language=en">About Us</a>
+        <a href="/website/contactUs?language=en">Contact Us</a>
+        <a class="icon" href="/website/javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <hr color="#E90017"/>
+    <div class="row" style="margin-left: -15px;margin-right: -15px;">
+        <table class="table forexQuote" style="margin-bottom:0px;">
+            <tr class="table-striped-dark-yellow">
+                <td class="vip_font align-middle text-center" style="padding-left:5px; padding-right:5px;">
+                    <strong>VIP</strong>
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/CNY.gif"/>
+                    <strong>AUD/CNY</strong>
+                     
+                    <strong>TT</strong>
+                </td>
+                <td align="right" class="vip_font">
+                    4.2245
+                     
+                    4.3406
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr color="#E90017"/>
+    <div class="row" style="margin-left: -15px;margin-right: -15px;">
+        <table class="table table-sm forexQuote">
+            <thead>
+            <tr class="table-striped-head-yellow">
+                <th class="text-center" colspan="2">Pair</th>
+                <th class="text-center">AskC</th>
+                <th class="text-center">BidC</th>
+                <th class="text-center">AskCTT</th>
+                <th class="text-center">AskTT</th>
+                <th class="text-center">BidTT</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/CNY.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/CNY
+                </td>
+                <td class="text-center">4.2405</td>
+                <td class="text-center">4.5462</td>
+                <td class="text-center">4.2215</td>
+                <td class="text-center">4.2215</td>
+                <td class="text-center">4.3436</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/USD.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/USD
+                </td>
+                <td class="text-center">0.5667</td>
+                <td class="text-center">0.6239</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.5834</td>
+                <td class="text-center">0.6107</td>
+            </tr>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/HKD.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/HKD
+                </td>
+                <td class="text-center">4.2324</td>
+                <td class="text-center">4.6812</td>
+                <td class="text-center"></td>
+                <td class="text-center">4.4688</td>
+                <td class="text-center">4.6548</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/NZD.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/NZD
+                </td>
+                <td class="text-center">1.0023</td>
+                <td class="text-center">1.0428</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.9973</td>
+                <td class="text-center">1.0288</td>
+            </tr>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/JPY.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/JPY
+                </td>
+                <td class="text-center">63.38</td>
+                <td class="text-center">67.71</td>
+                <td class="text-center"></td>
+                <td class="text-center">63.87</td>
+                <td class="text-center">66.54</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/EUR.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/EUR
+                </td>
+                <td class="text-center">0.5242</td>
+                <td class="text-center">0.5656</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.5247</td>
+                <td class="text-center">0.5556</td>
+            </tr>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/CAD.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/CAD
+                </td>
+                <td class="text-center">0.8344</td>
+                <td class="text-center">0.8781</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.8352</td>
+                <td class="text-center">0.8767</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/GBP.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/GBP
+                </td>
+                <td class="text-center">0.4733</td>
+                <td class="text-center">0.5119</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.4815</td>
+                <td class="text-center">0.5131</td>
+            </tr>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/AUD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/SGD.gif"/>
+                </td>
+                <td class="text-left">
+                    AUD/SGD
+                </td>
+                <td class="text-center">0.8206</td>
+                <td class="text-center">0.8839</td>
+                <td class="text-center"></td>
+                <td class="text-center">0.8236</td>
+                <td class="text-center">0.8569</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/NZD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/CNY.gif"/>
+                </td>
+                <td class="text-left">
+                    NZD/CNY
+                </td>
+                <td class="text-center">4.0578</td>
+                <td class="text-center">4.3142</td>
+                <td class="text-center"></td>
+                <td class="text-center">4.1323</td>
+                <td class="text-center">4.2490</td>
+            </tr>
+            <tr class="table-striped-light-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/USD.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/HKD.gif"/>
+                </td>
+                <td class="text-left">
+                    USD/HKD
+                </td>
+                <td class="text-center">7.7304</td>
+                <td class="text-center">7.7774</td>
+                <td class="text-center"></td>
+                <td class="text-center">7.7539</td>
+                <td class="text-center">7.7539</td>
+            </tr>
+            <tr class="table-striped-dark-yellow">
+                <td class="text-right">
+                    <img class="img-fluid" src="/website/resources/images/flag/EUR.gif"/>
+                    <img class="img-fluid" src="/website/resources/images/flag/USD.gif"/>
+                </td>
+                <td class="text-left">
+                    EUR/USD
+                </td>
+                <td class="text-center">1.0770</td>
+                <td class="text-center">1.1022</td>
+                <td class="text-center"></td>
+                <td class="text-center">1.0825</td>
+                <td class="text-center">1.0962</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col text-center text-muted">
+            <small>This rate just for reference.</small>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col"><img class="img-fluid w-100" src="/website/resources/images/SP_Banner_EN_201207_750x170.gif"/>
+        </div>
+    </div>
+    <br/>
+    <div class="row row-eq-height" style="margin-left: -15px;margin-right: -15px;">
+        <div class="col-md-12 col-lg-6">
+            <div class="row">
+                <div class="col" style="padding-left:15px;">
+                    <h5 style="color:#E90017;">Forex News</h5>
+                    <!-- <img src="/website/resources/images/Index_news_en.gif" class="img-fluid"> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('news','47761')">The Week Ahead – Monetary &amp;
+                        Fiscal Policy, Stats and the Coronavirus in Focus</a>  
+                    <input id="news_title_47761" name="news_title_47761" type="hidden"
+                           value="The Week Ahead – Monetary &amp; Fiscal Policy, Stats and the Coronavirus in Focus"/>
+                    <input id="news_content_47761" name="news_content_47761" type="hidden" value="On the Macro
+It’s a busier week ahead on the economic calendar, with 57 stats to monitor in the week ending 21st March. In the week prior, 49 stats had been in focus.
+For the Dollar:
+It’s a busy start to the week, the manufacturing sector and consumers are in focus early on.
+NY Empire State Manufacturing Index figures for March and industrial production figures for February are due out on Monday and Tuesday.
+Expect any marked slide to weigh.
+February retail sales figures are also due out on Tuesday. The markets will get an initial sense of what impact the spread of the virus in China had on consumer purse strings.
+Later in the week, the focus will shift to the Philly FED Manufacturing Index and weekly jobless claims on Thursday.
+While the markets may be able to take a slide in manufacturing output, any spike in jobless claims will sound the alarm bells…
+Barring particularly dire numbers, we would expect February housing sector figures to have a muted impact. March numbers next month, however, will be considered a litmus test…
+While we will expect influence from the stats this week, the FOMC interest rate decision is the main event.
+The markets have priced in another rate cut, which should support risk sentiment. Much will depend upon the economic projections and press conference, however, which will give an idea of what lies ahead…
+While Wednesday is the main event, expect the U.S administration to also have a material impact in the week. Fiscal policy support is expected following Friday’s press conference…Any snags and expect Dollar weakness to return.
+The Dollar Spot Index ended the week up 2.76% to 98.749.
+For the EUR:
+It’s a relatively quiet week ahead on the economic data front.
+Key stats include March ZEW economic sentiment figures on Tuesday and Eurozone trade figures for January on Wednesday.
+Expect the ZEW numbers on Tuesday to have the greatest influence in the week. January’s trade figures will not reflect the effects of the coronavirus on trade.
+Finalized February inflation figures due out of Italy and the Eurozone will also likely have a muted impact.
+Outside of the numbers, news updates and government action to remain the key driver, however.
+The EUR could find support should the likes of Germany and France loosen the purse strings. There were rumblings at the end of last week. The bigger issue, however, will be the widening shut down across the EU. Fiscal and monetary policy will have little influence on consumption if businesses are in shut down mode.
+The EUR/USD ended the week down by 1.57% to $1.1107.
+For the Pound:
+It’s also a relatively quiet week ahead on the economic calendar.
+Key stats are limited to January unemployment and wage growth and February claimant count figures.
+We can expect the Pound to be particularly sensitive to the numbers and the claimant count figures in particular.
+Weak numbers will support further monetary policy easing. While there is plenty of focus on the BoE, the government’s moves to contain the virus will also be of influence.
+With the economy having stalled in January, a marked increase in coronavirus cases will add further pressure on the economy, fiscal policy or not…
+The GBP/USD ended the week down by a whopping 5.90% to $1.2278.
+For the Loonie:
+It’s a relatively busy week ahead on the economic calendar.
+On Wednesday, February inflation figures will provide direction. Expect softer inflation to raise expectations of a 3rd BoC rate cut.
+On Friday, the focus will then shift to January retail sales figures. The January numbers are unlikely to reflect the impact of the coronavirus on consumer sentiment, which should limit the influence on the Loonie.
+In the week, January manufacturing sales and February house price figures will also limited impact.
+While stats in the week will influence, crude oil prices will continue to have a material impact. The BoC cut rates on Friday in response to falling crude oil prices and the coronavirus.
+The Loonie ended the week down by 2.89% to C$1.3806 against the U.S Dollar.
+Out of Asia
+For the Aussie Dollar:
+It’s another quiet week ahead on the economic calendar.
+February employment figures, due out on Thursday, will have a material impact on the Loonie.
+Disruptions to supply chains and global trade are expected to have a material impact on the Australian economy. Weak numbers will likely raise concerns over near-term consumer spending. In turn, this may well lead to the RBA signaling another rate cut.
+Early in the week, we would expect the markets to brush aside 4th quarter house price figures.
+On Tuesday, the RBA’s meeting minutes will garner plenty of interest. Following the March rate cut, the markets will be looking for any hint of further action.
+The minutes have tended to be far more dovish than the RBA Statements in recent months…
+From elsewhere, expect economic data out of China and coronavirus updates to also influence.
+The Aussie Dollar ended the week down by 6.53% to $0.6203.
+For the Kiwi Dollar:
+It’s also a quiet week ahead on the economic data front. Key stats include 1st quarter consumer sentiment figures on Tuesday and 4th quarter GDP numbers due out on Thursday.
+The RBNZ has been on the quieter side recently, which will make the Kiwi all the more sensitive to the numbers.
+We would expect any upside from the stats to be limited, with the NZ economy expected to take a hit in the 1st quarter.
+Consumer sentiment figures will have a greater impact at the start of the week.
+Outside of the numbers, the Kiwi Dollar will remain sensitive to the news wires.
+The Kiwi Dollar ended the week down by 3.40% to $0.6134.
+For the Japanese Yen:
+It’s a relatively busy week on the economic calendar. Key stats February trade data due out on Wednesday and inflation figures due out on Thursday.
+With the Bank of Japan interest rate decision on Wednesday, we can expect trade data to be the key driver.
+China’s economic woes in February are likely to impact Japan, which suggests a slump in exports. A widening in the trade deficit and weak demand from overseas would force the BoJ into action on Thursday.
+We will expect finalized industrial production figures for January to have a muted impact on Tuesday.
+Outside of the numbers, expect market risk sentiment to ultimately drive the Yen, however.
+It wouldn’t be the 1st time that the BoJ has eased and the Yen has rallied…
+The Japanese Yen ended the week down by 2.12% to ¥107.62 against the U.S Dollar.
+Out of China
+It’s a relatively quiet week on the economic data front.
+It’s a busy start to the week, however, with February fixed asset, industrial production and retail sales figures in focus.
+The markets will be expecting particularly dire numbers for February. It won’t make it any easier to swallow, however.
+Expect the stats to have a material influence on the Japanese Yen and the commodity currencies.
+Outside of the numbers, the PBoC is in action on Friday, with the monthly resetting of the LPRs.
+The markets are pricing in further rate cuts that would support risk appetite.
+The Chinese Yuan fell by 1.09% to CNY7.0087 against the U.S Dollar in the week.
+Geo-Politics
+Trade Wars:
+There has been no chatter on trade as governments battle the coronavirus… We expect the silence on trade wars to continue, with the ongoing disruption to supply chains the major concern at present.
+UK Politics:
+Talks were set to resume in the week ahead. With talks now delayed due to the coronavirus, the markets could get a little jittery over the timelines. How long will talks be delayed for and will Johnson agree to an extension if there is no framework in place by June?
+Worst case scenario, talks could continue by phone, assuming that all parties are willing and able.
+U.S Politics:
+Joe Biden remains the Democratic front runner to face off against Trump in November. Any hint of a Sanders come back and expect the markets to balk… The spread of the coronavirus has resulted in delays to state primaries. While the markets will not like the uncertainty, how the U.S administration handles the virus in the week ahead will be of greater significance… The Republicans will be looking to get passed last week’s blunders.
+The Coronavirus:
+While monetary policy and economic data will influence in the week, we continue to expect news updates on the spread of the coronavirus to remain the key driver.
+Europe is in shut down mode, with member states closing borders.
+It could be a week where even more nations need to implement stringent containment measures. The weekend certainly delivered plenty of alarming news to kick the week off.
+There’s a lot that can go wrong for the global financial markets going into the week… The reality is that EU member states had the opportunity to close borders weeks ago, before becoming the epicenter.
+This article was originally posted on FX Empire"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-03-16</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('news','45946')">Australian share market opens
+                        higher after tumultuous week</a>  
+                    <input id="news_title_45946" name="news_title_45946" type="hidden"
+                           value="Australian share market opens higher after tumultuous week"/>
+                    <input id="news_content_45946" name="news_content_45946" type="hidden" value="The Australian share market has crept marginally higher after three tumultuous days during which most of the gains it made this year were all but wiped out.
+The benchmark S &amp; P/ASX200 index was up 8.8 points, or 0.13 per cent, at 6,716.9 at 1030 AEDT despite falls on the energy, industrial, financial, telco and property indices.
+The broader All Ordinaries index rose 8.7 points, or 0.13 per cent, to 6,799.4 after overseas stock markets stabilised overnight after days of losses. IG market analyst Kyle Rodda says the absence of hard-hitting coronavirus news was likely behind the relative calm on global markets overnight but traders remained on edge.
+“The situation remains fraught with danger, as the number of new cases of the coronavirus outside of China begins to exceed those within China,” he said. Consumer staple A2 Milk was an early riser, surging 8.73 per cent to $16.31 on China demand for its infant formula.
+Air New Zealand rose two cents to $2.34 after slashing capacity in Asia to deal with the coronavirus fallout on travel.
+Buy now, pay later operator Afterpay was winning over investors after half an hour of trade on Thursday when its shares rose 92 cents, or 2.56 per cent, to $36.89 after reporting a bigger loss.
+Investors will be watching for any coronavirus news, data on new private capital expenditure for the December quarter of 2019 and expected expenditure.
+Australian investors on Thursday will be watching for coronavirus news as well as companies earnings reports and data on new private capital expenditure for the December quarter of 2019 – and expected expenditure.
+The Australian dollar was buying 65.46 US cents at 1030 AEDT on Thursday, down from a near 11-year low of 65.88 US cents on Wednesday as the market closed.
+（From News）"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-03-06</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('news','45647')">AUD/USD Technical Analysis: Aussie
+                        Dollar Upswing Fizzling?</a>  
+                    <input id="news_title_45647" name="news_title_45647" type="hidden"
+                           value="AUD/USD Technical Analysis: Aussie Dollar Upswing Fizzling?"/>
+                    <input id="news_content_45647" name="news_content_45647" type="hidden" value="AUD/USD TECHNICAL OUTLOOK: BEARISH
+Australian Dollar bounces to retest 2020 downtrend resistance
+Move higher struggling at near-term Fib barrier, may unravel
+Retail trader sentiment studies offering mixed directional cues
+The Australian Dollar tagged the 78.6% Fibonacci expansion at 0.6464 as expected and rebounded, testing resistance guiding the currency lower against its US counterpart since the beginning of the year. An RBA monetary policy announcement and fourth-quarter GDP data along with a broad-based recovery in risk appetite helped fuel for the rise.
+Neutralizing near-term selling pressure in earnest probably calls for a break above 0.6690, with confirmation of a breach secured on a daily closing basis. This level marks the outer layer of a range floor in play since early August 2019 and recast from support into resistance with a breakdown in February. Such a move would also pierce the year-to-date downtrend.
+Thus far however, AUD/USD has tellingly struggled to overcome more immediate resistance at 0.6585, the 61.8% Fib. The pair probed above the former support but failed to sustain enough of the rise to close above it. If this proves to precede a turn lower that is extrapolated into a push below the 78.6% level, the spotlight will turn to the 100% expansion at 0.6309 as the next point of interest.
+（From DailyFX）"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-03-05</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('news','45348')">US Dollar Price Action Setups
+                        After FOMC Emergency Rate Cut</a>  
+                    <input id="news_title_45348" name="news_title_45348" type="hidden"
+                           value="US Dollar Price Action Setups After FOMC Emergency Rate Cut"/>
+                    <input id="news_content_45348" name="news_content_45348" type="hidden" value="US DOLLAR, EUR/USD, USD/CAD, AUD/USD, USD/JPY ANALYSIS
+The FOMC announced an emergency rate cut earlier today.
+In an ironic twist, that announcement did little to stem the recent risk sell-off.
+The US Dollar has continued to sell-off, buoying reversals/retracements in EUR/USD and AUD/USD. USD/CAD is in the spotlight for the Bank of Canada tomorrow and AUD/USD just put in a ‘rate cut rally’ on the heels of the RBA move last night.
+（From DailyFX）"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-03-04</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('news','43545')">US Dollar, Euro, Gold, Dow
+                        Forecasts &amp; More for the Week Ahead</a>  
+                    <input id="news_title_43545" name="news_title_43545" type="hidden"
+                           value="US Dollar, Euro, Gold, Dow Forecasts &amp; More for the Week Ahead"/>
+                    <input id="news_content_43545" name="news_content_43545" type="hidden" value="The US dollar ripped to a 3-year high before pivoting lower as supply chain disruptions, largely due to the coronavirus outbreak, pushed business activity to a 76-month low.
+Amid the deterioration in sentiment and rise in recession risk, spot gold prices spiked to a 7-year high while the stock market retreated from its record.
+Meanwhile, a broader selloff in risk assets like crude oil and the Australian Dollar pushed the commodity and major currency pair markedly lower.
+The coronavirus outbreak and it’s corresponding impact on global GDP growth outlook will likely linger as a key theme to watch over the coming trading sessions.
+Take a look at the fundamental and technical forecasts below for detailed insight on what our analysts are expecting across the global market next week.
+(FROM DAILYFX)"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-02-25</div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <div class="row">
+                <div class="col" style="padding-left:15px;">
+                    <h5 style="color:#E90017;">Notice Board</h5>
+                    <!-- <img src="/website/resources/images/Index_bulletin_en.gif" class="img-fluid"> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('bulletin','1970')">Chatswood branch suspend
+                        operation on Saturday</a>  
+                    <input id="bulletin_title_1970" name="bulletin_title_1970" type="hidden"
+                           value="Chatswood branch suspend operation on Saturday"/>
+                    <input id="bulletin_content_1970" name="bulletin_content_1970" type="hidden"
+                           value="Base on our company business policy adjust, our Chatswood branch will no long operation on Saturday. Monday to Friday will still operate as usual."/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-03-12</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('bulletin','1968')">Australia Day Notice</a>  
+                    <input id="bulletin_title_1968" name="bulletin_title_1968" type="hidden"
+                           value="Australia Day Notice"/>
+                    <input id="bulletin_content_1968" name="bulletin_content_1968" type="hidden"
+                           value="Dear customers, our company will be closed from next Monday (2020-01-27) due to the holidays. The re-opening time will be 9.30a.m. next Tuesday (2020-01-28). Thanks for your attention. Wish you a happy holidays."/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2020-01-20</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('bulletin','1965')">2019 Christmas and New year
+                        Holiday Notice</a>  
+                    <input id="bulletin_title_1965" name="bulletin_title_1965" type="hidden"
+                           value="2019 Christmas and New year Holiday Notice"/>
+                    <input id="bulletin_content_1965" name="bulletin_content_1965" type="hidden" value="Dear customer, all of our branches will be closed during 25/12/2019 to 01/01/2020. The re-opening time will be 02/01/2020.
+Merry Christmas and happy new year!"/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2019-12-04</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('bulletin','1945')">Brisbane Ekka Royal Queensland
+                        Show holiday notice</a>  
+                    <input id="bulletin_title_1945" name="bulletin_title_1945" type="hidden"
+                           value="Brisbane Ekka Royal Queensland Show holiday notice"/>
+                    <input id="bulletin_content_1945" name="bulletin_content_1945" type="hidden"
+                           value="Dear Customer, Our Brisbane office will be closed on 14/08/2019 (Monday) for  Ekka Royal Queensland Show, and we will reopen on 15/08/2019. If you have any inquires, please contact Sydney office on 02 9267 8878 . Sorry for any inconvenience. Wish you have a nice holiday."/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2019-08-13</div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-8 d-inline" style="padding-left:15px;">
+                    <a class="text-dark" href="#" onclick="showPopUp('bulletin','1937')">Queen's birthday notice</a>  
+                    <input id="bulletin_title_1937" name="bulletin_title_1937" type="hidden"
+                           value="Queen's birthday notice"/>
+                    <input id="bulletin_content_1937" name="bulletin_content_1937" type="hidden"
+                           value="Please note that our office will close from 8/06/2019 to 10/06/2019 for Queen's Birthday. The re-opening time will be 9.30a.m. next Tuesday (11/06/2019). Thanks for your attention. "/>
+                </div>
+                <div class="col-12 col-sm-4 d-inline text-right">2019-06-05</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+		<div class="row">
+			<div class="col">
+				candle rate
+			</div>
+			<div class="col">
+				calculator
+			</div>
+		</div>
+		 -->
+<hr color="#E90017"/>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-2 col-sm-2 col-md-2 d-lg-none"> </div>
+            <div class="col-4 col-sm-5 col-md-5 col-lg-5" style="text-align: left;">Sydney</div>
+            <div class="col-6 col-sm-5 col-md-5 col-lg-7" style="text-align: left;">61 2 9267 8878</div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-2 col-sm-2 col-md-2 d-lg-none"> </div>
+            <div class="col-4 col-sm-5 col-md-5 col-lg-5" style="text-align: left;">Melbourne</div>
+            <div class="col-6 col-sm-5 col-md-5 col-lg-7" style="text-align: left;">61 3 9654 6690</div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-2 col-sm-2 col-md-2 d-lg-none"> </div>
+            <div class="col-4 col-sm-5 col-md-5 col-lg-5" style="text-align: left;">Brisbane</div>
+            <div class="col-6 col-sm-5 col-md-5 col-lg-7" style="text-align: left;">61 7 3344 1818</div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col text-center text-muted">
+        Copyright©2019 SUPAY All rights reserved.
+    </div>
+</div>
+<div class="modal fade" id="popupModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="popupModalTitle"></h4>
+                <button class="close" data-dismiss="modal" type="button">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="popupModalContent"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container -->
+</body>
+</html>
